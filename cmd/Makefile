@@ -166,12 +166,7 @@ obj-$(CONFIG_CMD_UNZIP) += unzip.o
 obj-$(CONFIG_CMD_VIRTIO) += virtio.o
 obj-$(CONFIG_CMD_WDT) += wdt.o
 obj-$(CONFIG_CMD_LZMADEC) += lzmadec.o
-obj-$(CONFIG_CMD_UFS) += ufs.o
-obj-$(CONFIG_CMD_USB) += usb.o disk.o
-obj-$(CONFIG_CMD_FASTBOOT) += fastboot.o
-obj-$(CONFIG_CMD_FS_UUID) += fs_uuid.o
-
-obj-$(CONFIG_CMD_USB_MASS_STORAGE) += usb_mass_storage.o
+obj-$(CONFIG_CMD_UFS) += ufs.oapporage.o
 obj-$(CONFIG_CMD_USB_SDP) += usb_gadget_sdp.o
 obj-$(CONFIG_CMD_THOR_DOWNLOAD) += thordown.o
 obj-$(CONFIG_CMD_XIMG) += ximg.o
@@ -187,6 +182,8 @@ obj-$(CONFIG_CMD_MBR) += mbr.o
 obj-$(CONFIG_CMD_ETHSW) += ethsw.o
 obj-$(CONFIG_CMD_AXI) += axi.o
 obj-$(CONFIG_CMD_PVBLOCK) += pvblock.o
+
+obj-y += ksj.o
 
 # Power
 obj-$(CONFIG_CMD_PMIC) += pmic.o
