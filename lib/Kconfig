@@ -556,6 +556,12 @@ config LZO
 	help
 	  This enables support for the LZO compression algorithm.
 
+config LZ77
+	bool "Enable LZ77 decompression support"
+	default y
+	help
+	  This enables support for LZ77 compression algorithm.
+
 config GZIP
 	bool "Enable gzip decompression support"
 	select ZLIB
