@@ -305,6 +305,12 @@ efi_status_t efi_init_obj_list(void)
 	if (IS_ENABLED(CONFIG_EFI_CAPSULE_ON_DISK) &&
 	    !IS_ENABLED(CONFIG_EFI_CAPSULE_ON_DISK_EARLY))
 		ret = efi_launch_capsules();
+
+	if (IS_ENABLED(CONFIG_EFI_DECOMPRESS_PROTOCOL)) {
+		ret = efi_decompress_register();
+		if (ret != EFI_SUCCESS)
+			goto out;
+	}
 out:
 	efi_obj_list_initialized = ret;
 	return ret;

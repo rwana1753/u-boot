@@ -369,4 +369,10 @@ config EFI_ESRT
 	help
 	  Enabling this option creates the ESRT UEFI system table.
 
+config EFI_DECOMPRESS_PROTOCOL
+	bool "EFI_DECOMPRESS_PROTOCOL support"
+	depends on LZ77
+	help
+	  Provide a EFI_DECOMPRESS_PROTOCOL implementation using the software LZ77 compression algorithm.
+
 endif
