@@ -375,4 +375,17 @@ config EFI_DECOMPRESS_PROTOCOL
 	help
 	  Provide a EFI_DECOMPRESS_PROTOCOL implementation using the software LZ77 compression algorithm.
 
+config EFI_HASH2_PROTOCOL
+	bool "EFI_HASH2_PROTOCOL support"
+	select MD5
+	select SHA1
+	select SHA256
+	select SHA384
+	select SHA512
+	select SHA512_ALGO
+	select HASH
+	default y
+	help
+	  Provide a EFI_DECOMPRESS_PROTOCOL implementation using the software hash algorithm.
+
 endif

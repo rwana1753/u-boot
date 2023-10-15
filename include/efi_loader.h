@@ -994,4 +994,18 @@ efi_status_t efi_esrt_populate(void);
 efi_status_t efi_load_capsule_drivers(void);
 
 efi_status_t platform_get_eventlog(struct udevice *dev, u64 *addr, u32 *sz);
+
+/**
+ * Install the DECOMPRESS protocol.
+ *
+ * Return:      status code
+ */
+efi_status_t efi_decompress_register(void);
+
+/**
+ * Install the HASH2 protocol.
+ *
+ * Return:      status code
+ */
+efi_status_t efi_hash2_register(void);
 #endif /* _EFI_LOADER_H */

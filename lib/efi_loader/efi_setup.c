@@ -311,6 +311,12 @@ efi_status_t efi_init_obj_list(void)
 		if (ret != EFI_SUCCESS)
 			goto out;
 	}
+
+	if (IS_ENABLED(CONFIG_EFI_HASH2_PROTOCOL)) {
+		ret = efi_hash2_register();
+		if (ret != EFI_SUCCESS)
+			goto out;
+	}
 out:
 	efi_obj_list_initialized = ret;
 	return ret;

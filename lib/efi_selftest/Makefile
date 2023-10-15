@@ -51,7 +51,8 @@ efi_selftest_tpl.o \
 efi_selftest_util.o \
 efi_selftest_variables.o \
 efi_selftest_variables_runtime.o \
-efi_selftest_watchdog.o
+efi_selftest_watchdog.o \
+efi_selftest_hash2.o
 
 obj-$(CONFIG_NET) += efi_selftest_snp.o
 
@@ -74,6 +75,7 @@ obj-y += efi_selftest_block_device.o
 endif
 
 obj-$(CONFIG_EFI_ESRT) += efi_selftest_esrt.o
+obj-$(CONFIG_EFI_HASH2_PROTOCOL) += efi_selftest_hash2.o
 
 targets += \
 efi_miniapp_file_image_exception.h \
